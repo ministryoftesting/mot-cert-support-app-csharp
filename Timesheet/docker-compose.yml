@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+ app:
+   image: ministryoftesting/support-app-c-sharp:latest
+   build:
+     context: .
+     dockerfile: Dockerfile
+   ports:
+     - "8080:8080"
+   volumes:
+     - ./timesheet.db:/app/timesheet.db
